@@ -1,0 +1,500 @@
+.popUp {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: rgba(90, 90, 90, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#peopleList {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  left: 5px;
+  top: 10%;
+  width: 100%;
+  height : 97%;
+  z-index: 1;
+}
+
+#peopleList .person .name {
+  position: relative;
+  left: 5px;
+}
+
+#peopleList .person .role {
+  position: relative;
+  left: 5px;
+  color: dimgray;
+}
+
+.power {
+  position: absolute;
+  right: 20px;
+}
+
+#userSelected {
+  background-color: rgb(211, 211, 211);
+}
+
+#peopleHeader {
+  position: absolute;
+  background-color: deepskyblue;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 65px;
+  border-top: solid lightgray;
+}
+
+.person {
+  border-bottom: solid gray 1px;
+}
+
+/* Dropdown Button */
+#myDropdown, #roomDropdown, #menudropdown {
+  position: absolute;
+  right: 0;
+  background-color: skyblue;
+}
+
+
+
+#roomDropdown {
+  position: absolute;
+
+}
+
+
+.dropbtn {
+  background-color: deepskyblue;
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: white;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: floralwhite;
+  color: #333333;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+body{
+  margin-top:20px;
+  background:#eee;
+}
+
+#roomSelected {
+  background-color: rgb(211, 211, 211);
+}
+
+#roomHeader, #chatHeader {
+  position: absolute;
+  background-color: deepskyblue;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 62px;
+}
+
+
+#userProfileCard .card {
+  height: 30%;
+}
+
+.card {
+  width: 300px;
+  height: 180px;
+  margin: 200px 450px;
+  float: bottom;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card button {
+  width: 180px;
+  background-color: deepskyblue;
+}
+
+#roomSetting {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+}
+
+
+#answerDiv {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+
+#message {
+  background-color: white;
+  position: absolute;
+  left:20%;
+  top: 8px;
+  width: 65%;
+  height: 30px;
+  border: transparent;
+}
+
+.btn-msg {
+  position: absolute;
+  height: 32px;
+  background-color: deepskyblue;
+  border: transparent;
+  color: white;
+  top: 8px;
+}
+
+#btn-msg {
+  right: 1%;
+}
+
+#emoji {
+  left: 1%;
+}
+
+#link {
+  left: 15%;
+}
+
+#roomDiv {
+  position: absolute;
+  width:23%;
+  height:87%;
+  top: 100px;
+  left: 5px;
+  border: solid lightgray;
+}
+
+#h6 {
+  position: absolute;
+  top: 20px;
+}
+
+#chatDiv {
+  position: absolute;
+  height:87%;
+  top: 100px;
+  right: 10px;
+  border: solid lightgray;
+}
+
+#rooms {
+  position: absolute;
+  overflow: scroll;
+  top: 62px;
+  height: 90%;
+}
+
+#msgDiv {
+
+  position: absolute;
+  width: 97%;
+  height: 80%;
+  top: 60px;
+}
+
+
+.row.row-broken {
+  padding-bottom: 0;
+}
+.col-inside-lg {
+  padding: 20px;
+}
+.chat {
+  height: calc(100vh - 180px);
+}
+.decor-default {
+  background-color: #ffffff;
+}
+
+.chat-users {
+  position: absolute;
+  width: 100%;
+  left:0;
+
+}
+
+.chat-users h6 {
+  font-size: 20px;
+  margin: 0 0 20px;
+  position: absolute;
+  left: 20px;
+}
+
+.broadCast {
+  text-align: center;
+  font-family: Verdana;
+  color: white;
+  background-color: lightgrey;
+
+}
+
+.chat-users .user {
+  position: relative;
+  padding: 0 0 0 50px;
+  display: block;
+  cursor: pointer;
+  height: 10%;
+}
+
+.chat-users .user .avatar {
+  top: 0;
+  left: 0;
+}
+.chat .avatar {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+.chat .avatar img {
+  display: block;
+  border-radius: 20px;
+  height: 100%;
+}
+.chat .avatar .status.off {
+  border: 1px solid #5a5a5a;
+  background: #ffffff;
+}
+.chat .avatar .status.online {
+  background: #4caf50;
+}
+.chat .avatar .status.busy {
+  background: #ffc107;
+}
+.chat .avatar .status.offline {
+  background: #ed4e6e;
+}
+.chat-users .user .status {
+  bottom: 0;
+  left: 28px;
+}
+.chat .avatar .status {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+}
+.chat-users .user .name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-users .user .mood {
+  font: 200 14px/20px "Raleway", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*****************CHAT BODY *******************/
+.chat-body h6 {
+  font-size: 20px;
+  margin: 0 0 20px;
+  position: absolute;
+}
+
+.chat-body #threeDot {
+  font-size: 20px;
+  position: absolute;
+  top: 2px;
+  right: 20px;
+}
+
+.chat-body .answer.left {
+  padding: 0 0 0 58px;
+  text-align: left;
+  float: left;
+}
+.chat-body .answer {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+}
+.chat-body .answer.left .avatar {
+  left: 0;
+}
+.chat-body .answer .avatar {
+  bottom: 36px;
+}
+.chat .avatar {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+.chat .avatar img {
+  display: block;
+  border-radius: 20px;
+  height: 100%;
+}
+.chat-body .answer .name {
+  font-size: 14px;
+  line-height: 36px;
+}
+.chat-body .answer.left .avatar .status {
+  right: 4px;
+}
+.chat-body .answer .avatar .status {
+  bottom: 0;
+}
+.chat-body .answer.left .text {
+  background: #ebebeb;
+  color: #333333;
+  border-radius: 8px 8px 8px 0;
+}
+.chat-body .answer .text {
+  padding: 12px;
+  font-size: 16px;
+  line-height: 26px;
+  position: relative;
+}
+.chat-body .answer.left .text:before {
+  left: -30px;
+  border-right-color: #ebebeb;
+  border-right-width: 12px;
+}
+.chat-body .answer .text:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  border: 18px solid transparent;
+  border-bottom-width: 0;
+}
+.chat-body .answer.left .time {
+  padding-left: 12px;
+  color: #333333;
+}
+.chat-body .answer .time {
+  font-size: 16px;
+  line-height: 36px;
+  position: relative;
+  padding-bottom: 1px;
+}
+/*RIGHT*/
+.chat-body .answer.right {
+  padding: 0 58px 0 0;
+  text-align: right;
+  float: right;
+}
+
+.chat-body .answer.right .avatar {
+  right: 0;
+}
+.chat-body .answer.right .avatar .status {
+  left: 4px;
+}
+.chat-body .answer.right .text {
+  background: deepskyblue;
+  color: white;
+  border-radius: 8px 8px 0 8px;
+}
+.chat-body .answer.right .text:before {
+  right: -30px;
+  border-left-color: #7266ba;
+  border-left-width: 12px;
+}
+.chat-body .answer.right .time {
+  padding-right: 12px;
+  color: #333333;
+}
+
+/**************ADD FORM ***************/
+
+.chat input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.chat input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.chat input:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.chat input::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;
+}
+
+.chat input:-ms-input-placeholder {
+  color: #fff;
+}
+.chat input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* The side navigation menu */
+.sidenav {
+  position: absolute; /* Stay in place */
+  height: 87%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  z-index: 1; /* Stay on top */
+  top: 100px; /* Stay at the top */
+  right: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  border-left: solid lightgray;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  color: white;
+}

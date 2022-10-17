@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TEAM ACE</title>
+
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Material Icons Link -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Link -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous"
+  />
+</head>
+
+<body>
+<nav class="navbar w-full bg-white">
+  <div class="container-lg px-0">
+    <div class="flex w-full items-center">
+      <a class="nav-brand mr-auto ml-0" href="">TEAM ACE</a>
+      <div id="menu" class="dropdown">
+        <button onclick="menuFunction()" class="button">
+          <i class="material-icons">account_box</i>
+        </button>
+        <div id="menudropdown" class="dropdown-content my-content">
+          <a href="#">Profile</a>
+          <a href="#"><i class="material-icons">exit_to_app</i>LogOut</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--Group member List-->
+<div id="mySidenav" class="sidenav">
+  <div id="peopleHeader"></div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">close</i></a>
+  <div class="col-inside-lg decor-default chat">
+
+    <div id="peopleList">
+      <div class="person">
+        <span class="power">
+          <button class="button button-icon">
+          <i class="material-icons">warning</i>
+          </button>
+          <button class="button button-icon">
+          <i class="material-icons">notifications_off</i>
+          </button>
+        </span>
+        <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+          <span class="font-medium text-gray-600 dark:text-gray-300">SK</span>
+        </div>
+        <div class="name">Savinay Kariyappa</div>
+        <div class="role">Admin</div>
+      </div>
+
+      <div class="person">
+        <span class="power">
+          <button class="button button-icon">
+          <i class="material-icons">warning</i>
+          </button>
+          <button class="button button-icon">
+          <i class="material-icons">notifications_off</i>
+          </button>
+        </span>
+        <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+          <span class="font-medium text-gray-600 dark:text-gray-300">RC</span>
+        </div>
+        <div class="name">Ren-kai Cheng</div>
+        <div class="role">Member</div>
+      </div>
+
+      <div class="person">
+        <span class="power">
+          <button class="button button-icon">
+          <i class="material-icons">warning</i>
+          </button>
+          <button class="button button-icon">
+          <i class="material-icons">notifications_off</i>
+          </button>
+        </span>
+        <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+          <span class="font-medium text-gray-600 dark:text-gray-300">TC</span>
+        </div>
+        <div class="name">Ting-Chien Cheng</div>
+        <div class="role">Member</div>
+      </div>
+
+      <div class="person">
+        <span class="power">
+          <button class="button button-icon">
+          <i class="material-icons">warning</i>
+          </button>
+          <button class="button button-icon">
+          <i class="material-icons">notifications_off</i>
+          </button>
+        </span>
+        <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+          <span class="font-medium text-gray-600 dark:text-gray-300">HF</span>
+        </div>
+        <div class="name">Haoyu Fang</div>
+        <div class="role">Member</div>
+      </div>
+
+      <div class="person">
+        <span class="power">
+          <button class="button button-icon">
+          <i class="material-icons">warning</i>
+          </button>
+          <button class="button button-icon">
+          <i class="material-icons">notifications_off</i>
+          </button>
+        </span>
+        <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+          <span class="font-medium text-gray-600 dark:text-gray-300">CJ</span>
+        </div>
+        <div class="name">Changhe Ji</div>
+        <div class="role">Member</div>
+      </div>
+
+
+      <div style="text-align: center" class="person">
+        <i class="material-icons">add_box</i>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="all">
+  <div  id="roomDiv" class="col-inside-lg decor-default chat">
+    <div id="roomHeader"></div>
+    <div class="chat-users">
+      <h6 style="color: white"><i class="material-icons">chat</i></h6>
+    </div>
+    <div id="roomSetting" class="dropdown">
+      <button onclick="roomSetting()" class="dropbtn rooms"><i style="color: white" class="material-icons">add_circle_outline</i></button>
+      <div id="roomDropdown" class="dropdown-content rooms-content">
+        <a href="#" id="newTeam">Create Public Room</a>
+        <a href="#" id="newPrivateTeam">Create Private Room</a>
+        <a href="#" id="newPublic">Join PublicRoom</a>
+        <a href="#" id="newPrivate">Join PrivateRoom</a>
+      </div>
+    </div>
+    <!--room list-->
+    <div id="rooms" class="chat-users">
+      <div class="relative text-gray-600 focus-within:text-gray-400">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 text-gray-500"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+        <input aria-placeholder="search" placeholder="search"
+               class="py-2 pl-10 block w-full rounded bg-gray-100 outline-none focus:text-gray-600" type="search" name="search" required autocomplete="search" />
+      </div>
+
+      <div class="card-body flex items-center">
+        <div class="mr-3">
+          <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+            <span class="font-medium text-gray-600 dark:text-gray-300">TA</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <strong>TEAM ACE</strong><br>
+          <span class="text-muted">5 min</span>
+        </div>
+        <div class="ml-3">
+          <span class="js-dragula-handle material-icons" style="cursor: move;">drag_handle</span>
+        </div>
+      </div>
+
+      <div class="card-body flex items-center">
+        <div class="mr-3">
+          <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+            <span class="font-medium text-gray-600 dark:text-gray-300">C5</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <strong>COMP 504</strong><br>
+          <span class="text-muted">last day</span>
+        </div>
+        <div class="ml-3">
+          <span class="js-dragula-handle material-icons" style="cursor: move;">drag_handle</span>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div id="chatDiv" class="col-sm-9 col-xs-12 chat">
+    <div id="chatHeader"></div>
+    <div class="chat-users">
+      <h6 id="h6" style="color: white">
+        <div>
+          <i style="color: white" class="material-icons">sms</i>
+          <span>TEAM ACE</span>
+        </div>
+      </h6>
+    </div>
+    <div class="chat-body">
+      <div id="threeDot" class="dropdown">
+        <button onclick="myFunction()" class="dropbtn my"><i style="color: white" class="material-icons">mode_edit</i></button>
+        <div id="myDropdown" class="dropdown-content my-content">
+          <a href="#" onclick="openNav()"><i style="color: white" class="material-icons">supervisor_account</i>See People</a>
+          <a href="#" id="leaveGroup">
+            <i style="color: white" class="material-icons">input</i>Leave</a>
+        </div>
+      </div>
+
+      <div id="msgDiv">
+
+      </div>
+
+    </div>
+
+
+    <div id="answerDiv">
+      <div class="max-w-2xl mx-auto">
+
+        <form>
+          <label for="chat" class="sr-only">Your message</label>
+          <div class="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
+            <button type="button" class="p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clip-rule="evenodd"></path></svg>
+            </button>
+            <textarea id="chat" rows="1" class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+            <button type="submit" class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
+              <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/message.js" defer></script>
+</body>
+</html>
+
+
