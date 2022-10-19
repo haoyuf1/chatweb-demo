@@ -1,33 +1,39 @@
-/*should be using json/ localstorage/ cookies to store the data*/
-let room_array = 0;
-let current_room = null;
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
 function menuFunction() {
-  document.getElementById("menudropdown").classList.toggle("show");
+  document.getElementById("Nav-dropdown").classList.toggle("show");
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
 }
 
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function roomSetting() {
-  document.getElementById("roomDropdown").classList.toggle("show");
-}
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "15%";
-  document.getElementById("chatDiv").style.marginRight = "288px";
-  document.getElementById("chatDiv").style.width = "60%";
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("ChatRoom").style.marginRight = "250px";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("chatDiv").style.marginRight = "0";
-  document.getElementById("chatDiv").style.width = "100%";
+  document.getElementById("ChatRoom").style.marginRight = "0";
 }

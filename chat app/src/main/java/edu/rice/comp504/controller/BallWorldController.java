@@ -1,7 +1,6 @@
 package edu.rice.comp504.controller;
 
 import com.google.gson.Gson;
-import edu.rice.comp504.adapter.DispatchAdapter;
 
 import java.awt.*;
 
@@ -22,35 +21,6 @@ public class BallWorldController {
         staticFiles.location("/public");
         port(getHerokuAssignedPort());
         Gson gson = new Gson();
-        DispatchAdapter dis = new DispatchAdapter();
-
-        post("/load", (request, response) -> {
-            return gson.toJson(dis.loadAObject(request.queryParams("strategy"), request.queryParams("inter_strategy"),
-                request.queryParams("type"), Boolean.parseBoolean(request.queryParams("isSwitchable"))));
-        });
-
-        post("/switch", (request, response) -> {
-            return gson.toJson(dis.switchStrategy(request.queryParams("strategy"), request.queryParams("inter_strategy")));
-        });
-
-        get("/update", (request, response) -> {
-            return gson.toJson(dis.updateBallWorld());
-        });
-
-        post("/canvas/dims", (request, response) -> {
-            dis.setCanvasDims(new Point((int) Integer.parseInt(request.queryParams("width")),
-                (int) Integer.parseInt(request.queryParams("height"))));
-            return gson.toJson("set canvas dimensions");
-        });
-
-        get("/remove/:type", (request, response) -> {
-            return gson.toJson(dis.remove(request.params(":type")));
-        });
-
-
-        get("/clear", (request, response) -> {
-            return gson.toJson(dis.removeAll());
-        });
 
         redirect.get("/ballworld", "/");
         redirect.get("/*", "/");
